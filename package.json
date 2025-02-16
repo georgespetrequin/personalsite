@@ -1,24 +1,13 @@
 {
-  "name": "personalsite",
-  "homepage": "https://YOUR_GITHUB_USERNAME.github.io/REPO_NAME",
+  "name": "personal-site",
   "version": "1.0.0",
-  "description": "1. Make a simple landing page 2. Make a template for a blog post 3. Make a markdown to HTML converter 4. Add a contact form",
-  "main": "index.js",
+  "description": "Personal website with blog functionality",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "node scripts/build.js",
-    "start": "http-server dist",
-    "deploy": "npm run build && gh-pages -d dist",
-    "dev": "npm run build && npm start"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "marked": "^15.0.6"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
   },
   "devDependencies": {
-    "gh-pages": "^6.3.0",
-    "http-server": "^14.1.1"
+    "vite": "^5.1.0"
   }
 }

@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Georges Petrequin</title>
+    <style>
+        :root {
+            --gradient-text: linear-gradient(45deg, #6b8cff, #b195ff);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+        }
+
+        body {
+            background-color: #fafafa;
+            color: #333;
+            line-height: 1.6;
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .background-dots {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            opacity: 0.5;
+            z-index: -1;
+        }
+
+        .intro-section {
+            margin: 4rem 0;
+            max-width: 800px;
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            background: var(--gradient-text);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            margin-bottom: 1rem;
+        }
+
+        .location {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: #666;
+            margin: 1rem 0;
+        }
+
+        .location svg {
+            width: 16px;
+            height: 16px;
+        }
+
+        .bio {
+            font-size: 1.2rem;
+            color: #555;
+            margin: 2rem 0;
+        }
+
+        .links {
+            margin: 2rem 0;
+        }
+
+        .links a {
+            color: #6b8cff;
+            text-decoration: none;
+            margin-right: 1.5rem;
+            transition: color 0.3s;
+        }
+
+        .links a:hover {
+            color: #b195ff;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .project-card {
+            background: white;
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .project-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: #333;
+        }
+
+        .project-card p {
+            color: #666;
+            margin-bottom: 1.5rem;
+        }
+
+        .project-link {
+            display: inline-flex;
+            align-items: center;
+            color: #6b8cff;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .project-link:hover {
+            color: #b195ff;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 1rem;
+            }
+
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(8px);
+            padding: 1rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        }
+
+        .nav-container {
+            width: 100%;
+            max-width: 1200px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: #333;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .nav-links a:hover {
+            color: #6b8cff;
+        }
+
+        .home-icon {
+            width: 24px;
+            height: 24px;
+        }
+
+        /* Adjust main content to account for fixed nav */
+        main {
+            margin-top: 5rem;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <div class="nav-links">
+                <a href="/" title="Home">
+                    <svg class="home-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 2L2 12h3v8h6v-6h2v6h6v-8h3L12 2z"/>
+                    </svg>
+                </a>
+                <a href="/blog/index.html">Blog</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="background-dots"></div>
+    
+    <main>
+        <section class="intro-section">
+            <h1>hi, i'm georges</h1>
+            
+            <div class="location">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                </svg>
+                <span>York, UK</span>
+            </div>
+
+            <p class="bio">
+                I'm passionate about technology and building innovative solutions. Currently exploring web development
+                and sharing my journey through projects and blog posts.
+            </p>
+
+            <div class="links">
+                <a href="https://linkedin.com/in/your-profile" target="_blank">LinkedIn</a>
+                <a href="https://github.com/your-profile" target="_blank">GitHub</a>
+                <a href="/blog">Blog</a>
+            </div>
+        </section>
+
+        <section class="projects-grid">
+            <article class="project-card">
+                <h3>Project One</h3>
+                <p>A brief description of your first project and what technologies you used to build it.</p>
+                <a href="#" class="project-link">Learn more →</a>
+            </article>
+
+            <article class="project-card">
+                <h3>Project Two</h3>
+                <p>Description of another exciting project you've worked on, highlighting key features.</p>
+                <a href="#" class="project-link">Learn more →</a>
+            </article>
+
+            <article class="project-card">
+                <h3>Project Three</h3>
+                <p>Overview of a third project, maybe something you're currently working on.</p>
+                <a href="#" class="project-link">Learn more →</a>
+            </article>
+        </section>
+    </main>
+
+    <script>
+        // Create background dots
+        function createDots() {
+            const dots = document.querySelector('.background-dots');
+            const dotCount = 50;
+            
+            for (let i = 0; i < dotCount; i++) {
+                const dot = document.createElement('div');
+                dot.style.position = 'absolute';
+                dot.style.width = '4px';
+                dot.style.height = '4px';
+                dot.style.backgroundColor = Math.random() > 0.5 ? '#6b8cff' : '#b195ff';
+                dot.style.borderRadius = '50%';
+                dot.style.left = `${Math.random() * 100}%`;
+                dot.style.top = `${Math.random() * 100}%`;
+                dot.style.opacity = '0.2';
+                dots.appendChild(dot);
+            }
+        }
+
+        createDots();
+    </script>
+</body>
+</html> 

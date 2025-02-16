@@ -1,0 +1,14 @@
+[
+    {
+        "title": "Welcome to My Blog",
+        "date": "2024-02-15",
+        "slug": "welcome-post",
+        "excerpt": "This is my first blog post where I introduce myself and share my thoughts about technology and web development."
+    },
+    {
+        "title": "My Learning Journey",
+        "date": "2024-02-16",
+        "slug": "my-learnings",
+        "excerpt": "Exploring my journey in web development and the technologies I'm currently learning."
+    }
+] 
