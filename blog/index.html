@@ -60,6 +60,80 @@
         /* Ensure consistent font */
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background-color: white;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        main {
+            max-width: 800px;
+            margin: 6rem auto 4rem;
+            padding: 0 2rem;
+        }
+
+        /* Blog posts list styling */
+        .blog-posts {
+            margin-top: 2rem;
+        }
+
+        .blog-post {
+            display: block;
+            text-decoration: none;
+            color: inherit;
+            padding: 1.5rem 0;
+            position: relative;
+        }
+
+        .post-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            position: relative;
+            padding-bottom: 0.5rem;
+        }
+
+        .post-header::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 1px;
+            background: #333;
+            transition: width 0.3s ease-in-out;
+        }
+
+        .blog-post:hover .post-header::after {
+            width: 100%;
+        }
+
+        .post-title {
+            font-size: 2rem;
+            font-weight: 500;
+            margin: 0;
+            color: #333;
+        }
+
+        .post-date {
+            font-family: IBM Plex Mono, monospace;
+            color: #666;
+            font-size: 1rem;
+        }
+
+        .post-description {
+            margin-top: 1rem;
+            color: #666;
+        }
+
+        .read-more {
+            display: inline-block;
+            margin-top: 1rem;
+            color: #0066cc;
+            text-decoration: none;
+        }
+
+        .read-more:hover {
+            text-decoration: underline;
         }
 
         /* Intro section styling */
@@ -107,38 +181,40 @@
         <section class="blog-posts">
             
         <article class="blog-post">
-            <h2 class="gradient-text">Welcome to My Blog</h2>
-            <div class="post-meta">Posted on February 20, 2024</div>
-            <p>An introduction to my new blog where I'll share my thoughts on technology, development, and more.</p>
-            <a href="posts/welcome-to-my-blog.html" class="read-more">
-                Read more →
-            </a>
+            <div class="post-header">
+                <a href="posts/welcome-to-my-blog.html" class="post-title-link">
+                    <h2 class="post-title">Welcome to My Blog</h2>
+                </a>
+                <div class="post-date">February 20, 2024</div>
+            </div>
         </article>
     
 
         <article class="blog-post">
-            <h2 class="gradient-text">Getting Started with Web Development</h2>
-            <div class="post-meta">Posted on February 16, 2024</div>
-            <p>undefined</p>
-            <a href="posts/getting-started-with-web-development.html" class="read-more">
-                Read more →
-            </a>
+            <div class="post-header">
+                <a href="posts/getting-started-with-web-development.html" class="post-title-link">
+                    <h2 class="post-title">Getting Started with Web Development</h2>
+                </a>
+                <div class="post-date">February 16, 2024</div>
+            </div>
         </article>
     
 
         <article class="blog-post">
-            <h2 class="gradient-text">My First Blog</h2>
-            <div class="post-meta">Posted on January 1, 2024</div>
-            <p>A test post demonstrating various Markdown formatting features including headings, lists, links, and images.</p>
-            <a href="posts/my-first-blog.html" class="read-more">
-                Read more →
-            </a>
+            <div class="post-header">
+                <a href="posts/my-first-blog.html" class="post-title-link">
+                    <h2 class="post-title">My First Blog</h2>
+                </a>
+                <div class="post-date">January 1, 2024</div>
+            </div>
         </article>
     
             <article class="blog-post">
-                <h2 class="gradient-text">{{title}}</h2>
-                <div class="post-meta">Posted on {{date}}</div>
-                <p>{{description}}</p>
+                <div class="post-header">
+                    <h2 class="post-title">{{title}}</h2>
+                    <div class="post-date">{{date}}</div>
+                </div>
+                <p class="post-description">{{description}}</p>
                 <a href="{{url}}" class="read-more">
                     Read more →
                 </a>

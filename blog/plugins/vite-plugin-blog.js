@@ -101,12 +101,12 @@ function generateBlogContent() {
     // Generate index page with post previews
     const postsHtml = posts.map(post => `
         <article class="blog-post">
-            <h2 class="gradient-text">${post.title}</h2>
-            <div class="post-meta">Posted on ${formatDate(post.date)}</div>
-            <p>${post.description}</p>
-            <a href="posts/${post.slug}.html" class="read-more">
-                Read more →
-            </a>
+            <div class="post-header">
+                <a href="posts/${post.slug}.html" class="post-title-link">
+                    <h2 class="post-title">${post.title}</h2>
+                </a>
+                <div class="post-date">${formatDate(post.date)}</div>
+            </div>
         </article>
     `).join('\n');
 

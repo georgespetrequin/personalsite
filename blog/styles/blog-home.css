@@ -1,0 +1,89 @@
+/* Blog homepage specific styles */
+.blog-posts {
+    margin-top: 2rem;
+}
+
+.blog-post {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    padding: 2rem 0;
+    position: relative;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.blog-post:last-child {
+    border-bottom: none;
+}
+
+.post-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    position: relative;
+    padding-bottom: 0.5rem;
+}
+
+/* Remove the underline effect */
+.post-header::after {
+    display: none;
+}
+
+.post-title {
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin: 0;
+    color: #333;
+}
+
+.post-date {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    color: #666;
+    font-size: 1rem;
+    white-space: nowrap;
+    margin-left: 2rem;
+}
+
+.post-description {
+    margin-top: 1rem;
+    color: #666;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.read-more {
+    display: inline-block;
+    margin-top: 1rem;
+    color: #0066cc;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.read-more:hover {
+    text-decoration: underline;
+}
+
+/* Intro section styling */
+.intro-section {
+    text-align: center;
+    margin: 4rem 0;
+}
+
+.intro-section h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    background: linear-gradient(135deg, #6b8cff 0%, #4466ff 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-weight: 700;
+}
+
+.intro-section .bio {
+    color: #666;
+    max-width: 600px;
+    margin: 0 auto;
+    font-size: 1.2rem;
+    line-height: 1.6;
+} 
