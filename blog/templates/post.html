@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Getting Started with Web Development - Georges Petrequin</title>
+    <title>{{title}} - Georges Petrequin</title>
     <link rel="stylesheet" href="/src/styles.css">
     <link rel="stylesheet" href="/blog/styles/blog.css">
     <style>
@@ -221,38 +221,12 @@
     <main>
         <article class="blog-content">
             <header class="blog-header">
-                <h1>Getting Started with Web Development</h1>
-                <div class="post-meta">Posted on February 16, 2024</div>
+                <h1>{{title}}</h1>
+                <div class="post-meta">Posted on {{date}}</div>
             </header>
 
             <div class="blog-body">
-                <p>When I first started my journey into web development, I was overwhelmed by the vast array of technologies, frameworks, and tools available. In this post, I&#39;ll share my experience and provide a roadmap for beginners looking to start their web development journey.</p>
-<h2>The Fundamentals</h2>
-<p>Before diving into frameworks and advanced tools, it&#39;s crucial to master the fundamentals:</p>
-<ul>
-<li><strong>HTML:</strong> The backbone of web content, providing structure and meaning</li>
-<li><strong>CSS:</strong> Styling and layout, making websites visually appealing</li>
-<li><strong>JavaScript:</strong> Adding interactivity and dynamic behavior to web pages</li>
-</ul>
-<h2>Essential Tools</h2>
-<p>Here are some tools that have been invaluable in my development journey:</p>
-<ul>
-<li><strong>VS Code:</strong> A powerful, extensible code editor</li>
-<li><strong>Git:</strong> Version control for tracking changes and collaborating</li>
-<li><strong>Chrome DevTools:</strong> For debugging and optimizing websites</li>
-</ul>
-<h2>Learning Resources</h2>
-<p>The web development community is incredibly supportive, with numerous free resources available:</p>
-<ul>
-<li>MDN Web Docs for comprehensive documentation</li>
-<li>freeCodeCamp for structured learning paths</li>
-<li>YouTube tutorials for visual learning</li>
-<li>Dev.to and HashNode for community articles</li>
-</ul>
-<h2>Building Projects</h2>
-<p>The best way to learn is by building real projects. Start small and gradually increase complexity. This website itself is an example of putting these skills into practice, using HTML, CSS, and JavaScript to create a responsive and modern web presence.</p>
-<p>Remember, everyone starts somewhere, and the key is to remain consistent and curious. Don&#39;t be afraid to experiment with new technologies and learn from your mistakes. </p>
-
+                {{content}}
             </div>
 
             <a href="/blog/" class="back-to-blog">← Back to Blog</a>

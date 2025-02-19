@@ -1,7 +1,6 @@
 ---
 title: Getting Started with Web Development
-date: 2024-02-16
-description: In this post, I share my journey into web development, discussing the essential tools, resources, and lessons learned along the way.
+date: February 16, 2024
 ---
 
 When I first started my journey into web development, I was overwhelmed by the vast array of technologies, frameworks, and tools available. In this post, I'll share my experience and provide a roadmap for beginners looking to start their web development journey.

@@ -105,36 +105,7 @@
         </section>
 
         <section class="blog-posts">
-            
-        <article class="blog-post">
-            <h2 class="gradient-text">Welcome to My Blog</h2>
-            <div class="post-meta">Posted on February 20, 2024</div>
-            <p>An introduction to my new blog where I'll share my thoughts on technology, development, and more.</p>
-            <a href="posts/welcome-to-my-blog.html" class="read-more">
-                Read more →
-            </a>
-        </article>
-    
-
-        <article class="blog-post">
-            <h2 class="gradient-text">Getting Started with Web Development</h2>
-            <div class="post-meta">Posted on February 16, 2024</div>
-            <p>undefined</p>
-            <a href="posts/getting-started-with-web-development.html" class="read-more">
-                Read more →
-            </a>
-        </article>
-    
-
-        <article class="blog-post">
-            <h2 class="gradient-text">My First Blog</h2>
-            <div class="post-meta">Posted on January 1, 2024</div>
-            <p>A test post demonstrating various Markdown formatting features including headings, lists, links, and images.</p>
-            <a href="posts/my-first-blog.html" class="read-more">
-                Read more →
-            </a>
-        </article>
-    
+            {{#each posts}}
             <article class="blog-post">
                 <h2 class="gradient-text">{{title}}</h2>
                 <div class="post-meta">Posted on {{date}}</div>

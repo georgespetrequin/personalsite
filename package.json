@@ -1,16 +1,18 @@
 {
   "name": "personal-site",
   "version": "1.0.0",
-  "description": "Personal website with blog functionality",
+  "description": "Georges Petrequin's personal website",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview"
+    "build": "npm run build:blog",
+    "preview": "vite preview",
+    "build:blog": "node blog/plugins/build.js"
   },
   "devDependencies": {
     "vite": "^5.1.0"
   },
   "dependencies": {
-    "marked": "^15.0.7"
+    "front-matter": "^4.0.2",
+    "marked": "^11.2.0"
   }
 }
